@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .border-css{
+                padding:3px 3px 3px 3px;border:1px solid black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container border-css" style="width:90%;">
+            <header style="width:90%;">
+                <h2 id="headcontent" class="headcontent"><p>some text</p></h2>
+            </header>
+            <section class="border-css" style="width:90%;display:flex;">
+                <nav class="border-css" style="width:12%;">
+                    <ul style="list-style:none">
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Services</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </nav>
+                <article class="border-css" style="width:63%;margin-left:4px">
+                    <h2>The main Content display here</h2>
+                    <h3>All content is place here</h3>
+
+                    <button onclick="displayName()">Show my Name</button>
+                </article>
+                <aside class="border-css" style="width:25%;margin-left:4px">
+                    <h3>Offers for today</h3>
+                    <h3>offers for tomorrow</h3>
+                    <h3>Expired Deals</h3>
+                </aside>
+
+            </section>
+            <footer class="border-css" style="width:90%;">
+                    This is footer of my page and copy right content management will be displayed here.
+            </footer>
+        </div>
+        <script>            
+            sessionStorage.setItem("firstname","Sreekanth");
+            sessionStorage.setItem("middlename","Reddy");
+            sessionStorage.setItem("lastname","kotha");
+            var displayText = "Welcome to "+sessionStorage.getItem("firstname")+" "+sessionStorage.getItem("middlename")+" "+sessionStorage.getItem("lastname");
+            document.getElementById("headcontent").innerHTML = displayText;
+            
+            function displayName(){
+                alert(displayText);
+            }
+        </script>
+    </body>
+</html>
