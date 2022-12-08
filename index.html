@@ -2,15 +2,29 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
         <style>
             .border-css{
                 padding:3px 3px 3px 3px;border:1px solid black;
+            }
+            a{
+                color:black;
+            }
+            a:hover{
+                color:red;
+            }
+            a:visited{
+                color:blue;
+            }
+            p::first-letter{
+                color:red;
+                text-transform: uppercase;
             }
         </style>
 
     </head>
     <body>
-        <div class="container border-css" style="width:90%;">
+        <div class="container border-css text-1xl" style="width:90%;">
             <header style="width:90%;">
                 <h2 id="headcontent" class="headcontent"><p>some text</p></h2>
             </header>
@@ -24,10 +38,17 @@
                     </ul>
                 </nav>
                 <article class="border-css" style="width:63%;margin-left:4px">
-                    <h2>The main Content display here</h2>
-                    <h3>All content is place here</h3>
+                    <h2>the main Content display here</h2>
+                    <h3>tll content is place here</h3>
 
                     <button onclick="displayName()">Show my Name</button>
+                    <a class="text-3xl" href="https://www.geeksforgeeks.org/html-tutorials/">
+                        GeeksforGeeks HTML Tutorial
+                     </a>
+                     <button style="opacity: 0.2;">testing button 1</button>
+                     <button style="opacity: 0.4;">testing button 2</button>
+                     <button style="opacity: 0.6">testing button 3</button>
+                     <button style="opacity: 1;">testing button 4</button>
                 </article>
                 <aside class="border-css" style="width:25%;margin-left:4px">
                     <h3>Offers for today</h3>
