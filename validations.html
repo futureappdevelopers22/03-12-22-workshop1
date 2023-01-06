@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Client Validations</h2>
+        <!--
+            1) username : it should allow min 5 chars, it should only contain alpha numeric. manditory field
+
+        2) Password : it should contain min 6 chars, it should contain 1 uppercase and one numberic. manditory field
+
+        3) email : email validation should be in the format email. manditory field 
+        
+        4) select age : this is manditory field.
+                -->
+        <div id="errors">
+
+        </div>
+        <label>FirstName:</label>
+        <input type="text"></input><br>
+        <label >UserName</label>
+        <input onkeyup="validateusername(event)" type="text"></input><br><div style="color:red" id="usernameerror"></div>
+        <label>Password</label>
+        <input onblur="validatepassword()" type="password"></input><br>
+        <label >EmailID</label>
+        <input onkeyup="validateEmailID()" type="emailid"></input><br>
+        <label> Select Gender</label>
+        <select onselect="genderChanged()">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+
+        <button id="submitform">Submit Form</button>
+
+        <script>
+            function validateusername(event){
+                console.log(event.currentTarget.value);
+                var username = event.currentTarget.value;
+               
+   
+                    
+                if(event.currentTarget.value.length < 5 && /[^a-zA-Z0-9]/.test(username) ){
+                    document.getElementById("usernameerror").innerHTML = "Please enter atleast 5 chars  && Check Valid Username or Not"
+                }else{
+                    document.getElementById("usernameerror").innerHTML = "";
+                }
+            }
+        </script>
+    </body>
+</html>
